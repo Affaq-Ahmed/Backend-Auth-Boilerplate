@@ -15,6 +15,7 @@ export const register = async function ({
 	await user.save();
 	return {
 		user: user.toJSON(),
+		message: 'Registration successful',
 	};
 };
 
@@ -31,6 +32,7 @@ export const login = async function ({ email, password }) {
 	return {
 		user: user.toJSON(),
 		tokens: { accessToken, refreshToken },
+		message: 'Login successful',
 	};
 };
 
