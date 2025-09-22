@@ -69,14 +69,15 @@ app.get('/health', (_req, res) => res.json({ status: 'OK' }));
 app.use('/api/v1', routes);
 
 // 404
-app.use((req, res) =>
-	res.status(404).json({
-		success: false,
-		statusCode: 404,
-		code: 'NOT_FOUND',
-		message: 'Route not found',
-	}),
-);
+// app.use((req, res) =>
+// 	res.status(404).json({
+// 		success: false,
+// 		statusCode: 404,
+// 		code: 'NOT_FOUND',
+// 		message: 'Route not found',
+// 	}),
+// );
+app.use(notFound);
 
 // Errors
 app.use(errorHandler);

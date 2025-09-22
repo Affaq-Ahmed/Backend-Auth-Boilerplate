@@ -1,6 +1,6 @@
-import ApiError from '../../../lib/ApiError';
-import User from '../../../models/user.model';
-import { verifyRefreshToken } from '../../../utils/jwt';
+import ApiError from '../../../lib/ApiError.js';
+import User from '../../../models/user.model.js';
+import { verifyRefreshToken } from '../../../utils/jwt.js';
 
 export const register = async function ({
 	email,
